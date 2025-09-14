@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цветочный магазин "Flamingo-buket"</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Цветочный магазин "Flamingo-buket"</h1>
+        <nav>
+            <a href="index.html" class="nav-button">Главная</a>
+            <a href="#popular" class="nav-button">Каталог</a>
+            <a href="feedback.html" class="nav-button">Обратная связь</a>
+            <a href="login.html" class="nav-button">Вход</a>
+            <a href="#contacts" class="nav-button">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about">
+            <h2>О нас</h2>
+            <img src="images/1.jpg" alt="Цветы в магазине">
+            <p>
+                Дарите волшебство цветов с нашим Цветочным Магазином! 
+            </p>
+            <p>
+                Цветы для каждого случая: Выбирайте из нашего разнообразного ассортимента цветочных композиций для создания неповторимых моментов.
+            </p>
+            <p>
+                Купить цветы легко: Оформляйте заказ онлайн на нашем сайте или по телефону <a href="tel:+79252332300">+7 925 233 23 00</a>. Мы сделаем процесс покупки простым и приятным.
+            </p>
+            <div class="cta-buttons">
+                <a href="tel:+79252332300" class="cta-button">Заказать по телефону</a>
+                <a href="#popular" class="cta-button">Посмотреть каталог</a>
+            </div>
+        </section>
+
+        <section class="advantages">
+            <h2>Наши преимущества</h2>
+            <ul>
+                <li>Свежие цветы каждый день</li>
+                <li>Быстрая доставка в течение 2 часов</li>
+                <li>Индивидуальный подход к каждому клиенту</li>
+                <li>Гарантия свежести цветов</li>
+                <li>Профессиональные флористы</li>
+            </ul>
+        </section>
+
+        <section class="popular" id="popular">
+            <h2>Каталог букетов</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>Цена</th>
+                        <th>Действие</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Композиция в шляпной коробке</td>
+                        <td>4950 ₽</td>
+                        <td><button class="order-button" onclick="orderItem('Композиция в шляпной коробке')">Заказать</button></td>
+                    </tr>
+                    <tr>
+                        <td>Букет тюльпанов</td>
+                        <td>2200 ₽</td>
+                        <td><button class="order-button" onclick="orderItem('Букет тюльпанов')">Заказать</button></td>
+                    </tr>
+                    <tr>
+                        <td>Пионы в коробке</td>
+                        <td>4500 ₽</td>
+                        <td><button class="order-button" onclick="orderItem('Пионы в коробке')">Заказать</button></td>
+                    </tr>
+                    <tr>
+                        <td>Микс из полевых цветов</td>
+                        <td>2800 ₽</td>
+                        <td><button class="order-button" onclick="orderItem('Микс из полевых цветов')">Заказать</button></td>
+                    </tr>
+                    <tr>
+                        <td>Орхидеи в кашпо</td>
+                        <td>5200 ₽</td>
+                        <td><button class="order-button" onclick="orderItem('Орхидеи в кашпо')">Заказать</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <p>Контакты: <a href="tel:+79779513517">+7 (977) 951-35-17</a></p>
+        <p>Email: <a href="mailto:clever-flowers-shop@yandex.ru">clever-flowers-shop@yandex.ru</a></p>
+        <p>Адрес: Москва, ул. Бориса Галушкина 14 к1</p>
+        <div class="social-links">
+            <a href="#" class="social-button">WhatsApp</a>
+            <a href="#" class="social-button">Instagram</a>
+            <a href="#" class="social-button">Telegram</a>
+        </div>
+    </footer>
+
+    <script>
+        function orderItem(itemName) {
+            alert('Вы выбрали: ' + itemName + '\nДля оформления заказа позвоните нам по телефону +7 (977) 951-35-17');
+        }
+    </script>
+</body>
+</html>
