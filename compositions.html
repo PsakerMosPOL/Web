@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Выбрать букет - Flamingo-buket</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/compositions.css" />
+  <link rel="stylesheet" href="css/order-form.css" />
+  <link rel="stylesheet" href="css/print.css" media="print" />
+  <style>
+    .order-form-section {
+      max-width: 900px;
+      margin: 40px auto 80px;
+      padding: 40px 50px;
+      background-color: #fff;
+      border-radius: 25px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .order-form-section h2 {
+      margin-bottom: 30px;
+      color: tomato;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .order-form label {
+      display: block;
+      margin-bottom: 15px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .order-form input[type="text"],
+    .order-form input[type="email"],
+    .order-form input[type="tel"],
+    .order-form input[type="time"],
+    .order-form textarea,
+    .order-form select {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: 2px solid #ddd;
+      font-size: 1rem;
+      font-family: inherit;
+      box-sizing: border-box;
+      margin-top: 6px;
+      transition: border-color 0.3s ease;
+    }
+
+    .order-form input[type="text"]:focus,
+    .order-form input[type="email"]:focus,
+    .order-form input[type="tel"]:focus,
+    .order-form input[type="time"]:focus,
+    .order-form textarea:focus,
+    .order-form select:focus {
+      border-color: tomato;
+      outline: none;
+    }
+
+    .order-form textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .order-form fieldset {
+      border: none;
+      margin: 30px 0 15px;
+      padding: 0;
+    }
+
+    .order-form fieldset legend {
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #444;
+      font-size: 1.1rem;
+    }
+
+    .order-form fieldset label {
+      font-weight: 500;
+      display: block;
+      margin-bottom: 10px;
+      cursor: pointer;
+      color: #666;
+    }
+
+    .form-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .form-buttons button {
+      flex: 1;
+      margin: 0 10px;
+      padding: 12px 0;
+      border-radius: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .form-buttons button[type="submit"] {
+      background-color: tomato;
+      color: white;
+    }
+
+    .form-buttons button[type="submit"]:hover {
+      background-color: #d65252;
+    }
+
+    .form-buttons button[type="reset"] {
+      background-color: #ccc;
+      color: #333;
+    }
+
+    .form-buttons button[type="reset"]:hover {
+      background-color: #aaa;
+    }
+
+    /* Адаптивная форма для мобильных устройств */
+    @media (max-width: 600px) {
+      .order-form-section {
+        padding: 30px 20px;
+      }
+      .form-buttons {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .form-buttons button {
+        margin: 0;
+      }
+      .form-buttons button:first-child {
+        order: 2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Выбрать букет</h1>
+    <nav>
+      <a href="index.html" class="nav-button">Главная</a>
+      <a href="compositions.html" class="nav-button active">Выбрать букет</a>
+      <a href="index.html" class="nav-button">Каталог</a>
+      <a href="feedback.html" class="nav-button">Обратная связь</a>
+      <a href="login.html" class="nav-button">Вход</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="buk-section">
+      <h2>Букеты</h2>
+      <div class="dishes-grid">
+        <div class="dish-item">
+          <img src="images/buk1.jpg" alt="Букет роз" />
+          <p class="price">1800 ₽</p>
+          <p class="name">Букет роз</p>
+          <p class="weight">21 штука</p>
+          <button class="add-button">Добавить</button>
+        </div>
+        <div class="dish-item">
+          <img src="images/buk2.jpg" alt="Букет тюльпанов" />
+          <p class="price">1200 ₽</p>
+          <p class="name">Букет тюльпанов</p>
+          <p class="weight">15 штук</p>
+          <button class="add-button">Добавить</button>
+        </div>
+        <div class="dish-item">
+          <img src="images/buk3.jpg" alt="Букет пионов" />
+          <p class="price">2500 ₽</p>
+          <p class="name">Букет пионов</p>
+          <p class="weight">9 штук</p>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-section">
+      <h2>Композиции</h2>
+      <div class="dishes-grid">
+        <div class="dish-item">
+          <img src="images/main1.jpg" alt="Композиция в корзине" />
+          <p class="price">3800 ₽</p>
+          <p class="name">Композиция в корзине</p>
+          <p class="weight">Смешанные цветы</p>
+          <button class="add-button">Добавить</button>
+        </div>
+        <div class="dish-item">
+          <img src="images/main2.jpg" alt="Композиция в коробке" />
+          <p class="price">4500 ₽</p>
+          <p class="name">Композиция в коробке</p>
+          <p class="weight">Смешанные цветы</p>
+          <button class="add-button">Добавить</button>
+        </div>
+        <div class="dish-item">
+          <img src="images/main3.jpg" alt="Свадебная композиция" />
+          <p class="price">6200 ₽</p>
+          <p class="name">Свадебная композиция</p>
+          <p class="weight">Белые розы и лилии</p>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="gift-section">
+      <h2>Подарочная продукция</h2>
+      <div class="dishes-grid">
+        <div class="dish-item">
+          <img src="images/gift1.jpg" alt="Открытка" />
+          <p class="price">120 ₽</p>
+          <p class="name">Открытка</p>
+          <p class="weight">С текстом</p>
+          <button class="add-button">Добавить</button>
+        </div>
+        <div class="dish-item">
+          <img src="images/gift2.jpg" alt="Гелевые шары" />
+          <p class="price">350 ₽</p>
+          <p class="name">Латекс</p>
+          <p class="weight">В ассортименте</p>
+          <button class="add-button">Добавить</button>
+        </div>
+        <div class="dish-item">
+          <img src="images/gift3.jpg" alt="Мягкая игрушка" />
+          <p class="price">800 ₽</p>
+          <p class="name">Мягкая игрушка</p>
+          <p class="weight">Медведь 30 см</p>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-form-section">
+      <h2>Сделать заказ</h2>
+      <form class="order-form">
+        <label>Выберите товар
+          <select name="product" required>
+            <optgroup label="Букеты">
+              <option value="Букет роз">Букет роз - 1800 ₽</option>
+              <option value="Букет тюльпанов">Букет тюльпанов - 1200 ₽</option>
+              <option value="Букет пионов">Букет пионов - 2500 ₽</option>
+            </optgroup>
+            <optgroup label="Композиции">
+              <option value="Композиция в корзине">Композиция в корзине - 3800 ₽</option>
+              <option value="Композиция в коробке">Композиция в коробке - 4500 ₽</option>
+              <option value="Свадебная композиция">Свадебная композиция - 6200 ₽</option>
+            </optgroup>
+            <optgroup label="Подарочная продукция">
+              <option value="Открытка">Открытка - 120 ₽</option>
+              <option value="Латекс">Латекс - 350 ₽</option>
+              <option value="Мягкая игрушка">Мягкая игрушка - 800 ₽</option>
+            </optgroup>
+          </select>
+        </label>
+
+        <label>Имя <input type="text" name="name" required></label>
+        <label>Email <input type="email" name="email"></label>
+        <label>Номер телефона <input type="tel" name="phone"></label>
+        <label>Адрес доставки <input type="text" name="address"></label>
+        <label>Комментарии <textarea name="comment"></textarea></label>
+
+        <fieldset>
+          <legend>Время доставки</legend>
+          <label><input type="radio" name="delivery-time" value="asap" checked> Как можно скорее</label>
+          <label><input type="radio" name="delivery-time" value="scheduled"> К указанному времени</label>
+        </fieldset>
+
+        <label>Укажите время <input type="time" name="time" min="07:00" max="23:00"></label>
+
+        <div class="form-buttons">
+          <button type="reset">Сбросить</button>
+          <button type="submit">Отправить</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Контакты: <a href="tel:+79779513517">+7 (977) 951-35-17</a></p>
+    <p>Email: <a href="mailto:clever-flowers-shop@yandex.ru">clever-flowers-shop@yandex.ru</a></p>
+    <p>Адрес: Москва, ул. Бориса Галушкина 14 к1</p>
+  </footer>
+</body>
+</html>
