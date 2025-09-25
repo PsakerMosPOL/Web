@@ -1,0 +1,17 @@
+@media print {
+  body, .content {
+    background: white !important;
+    color: black !important;
+    font-size: 14pt;
+    line-height: 1.4;
+  }
+
+  .sidebar, .menu, button, input, select, textarea, nav, .form-buttons, .add-button {
+    display: none !important;
+  }
+
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+}

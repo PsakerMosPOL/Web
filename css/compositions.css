@@ -1,0 +1,198 @@
+/* Основной контент */
+main {
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Секции цветов */
+.buk-section,
+.main-section,
+.gift-section {
+  margin-bottom: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.buk-section h2,
+.main-section h2,
+.gift-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #ff6b6b;
+  text-align: center;
+  position: relative;
+}
+
+.buk-section h2::after,
+.main-section h2::after,
+.gift-section h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, #ff6b6b, #ffa5a5);
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* Сетка для цветов с CSS Grid */
+.dishes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 30px 40px;
+}
+
+/* Блок каждого цветочного букета с Flex */
+.dish-item {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  border-radius: 35px;
+  background-color: white;
+  filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dish-item:hover {
+  border: 2px solid tomato;
+}
+
+/* Изображение букета */
+.dish-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 35px;
+  margin-bottom: 15px;
+}
+
+/* Цена */
+.dish-item .price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Название букета */
+.dish-item .name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+/* Количество/описание */
+.dish-item .weight {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+/* Кнопка "Добавить" */
+.dish-item .add-button {
+  background-color: #f1eee9;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.dish-item:hover .add-button {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.dish-item .add-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Адаптивность для планшетов и мобильных */
+@media (max-width: 800px) {
+  .dishes-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 20px 30px;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-button {
+    width: 90%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .buk-section h2,
+  .main-section h2,
+  .gift-section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .dishes-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 15px;
+  }
+
+  .dish-item {
+    padding: 25px 30px;
+  }
+
+  .dish-item img {
+    height: 180px;
+  }
+}
+
+/* Дополнительные стили для мобильных */
+@media (max-width: 400px) {
+  main {
+    padding: 15px 10px;
+  }
+
+  .buk-section,
+  .main-section,
+  .gift-section {
+    padding: 20px 15px;
+  }
+
+  .dish-item {
+    padding: 20px 25px;
+  }
+
+  .dish-item img {
+    height: 150px;
+  }
+
+  .dish-item .price {
+    font-size: 1.2rem;
+  }
+
+  .dish-item .name {
+    font-size: 1.1rem;
+  }
+}
